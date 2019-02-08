@@ -13,7 +13,7 @@ image = cv2.imread(sys.argv[1])
 gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)    #Convert image to grayscale , 0-255
 
 height, width = gray_image.shape[:2]
-print height * width * .005
+print(height * width * .005)
 img = cv2.adaptiveThreshold(gray_image,255,cv2.ADAPTIVE_THRESH_MEAN_C,cv2.THRESH_BINARY_INV,7,10)   #Adaptive thresholding, geberates bianry image
 cv2.imwrite("grayscale.jpg",img)
 
@@ -30,7 +30,7 @@ for (i, j) in zip(contours, hierarchy[0]):
 
 contour_rects.sort(key=lambda x:get_rect_rank(x,height,width))       #Sort contours left to right (Useful for generating html code)
 
-print contour_rects
+print(contour_rects)
 k=0
 for x,y,x_w,y_h in contour_rects:
         gray_image = cv2.rectangle(gray_image,(x,y),(x_w,y_h),(0,0,0),2)        #Draw contours
