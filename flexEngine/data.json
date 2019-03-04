@@ -2,7 +2,7 @@
 	"xmax":"1080",
 	"ymax":"720",
 	"regions":[
-		{
+    {
 			"id":"asdfsdfadsfasdf",
 			"type":"TextBox",
 			"height":"100",
@@ -14,7 +14,6 @@
 			"child":"{id}"
 		},
 		{
-
 			"id":"asdfsdfadsfasdf",
 			"type":"Label",
 			"height":"100",
@@ -24,6 +23,31 @@
 			"content": "abcdefgh",
 			"parent":"{id}",
 			"child":"{id}"
-		}
+		},
+    {
+      "id":"asdfsdfadsfasdf",
+      "type":"CheckBox",
+      "content": "abcdefgh",
+      "parent":"{id}",
+      "child":"{id}"
+    },
+    {
+			"id":"asdfsdfadsfasdf",
+			"type":"Image",
+      "src": "photo.png",
+			"height":"100",
+			"width":"100",
+			"x":"500",
+			"y":"400",
+			"parent":"{id}",
+			"child":"{id}"
+		},
+    {
+      "id":"asdfsdfadsfasdf",
+      "type":"Button",
+      "content": "abcdefgh",
+      "parent":"{id}",
+      "child":"{id}"
+    }
 	]
 }
