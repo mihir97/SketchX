@@ -7,12 +7,18 @@ def generate_html(data,css):
     doc.asis('<!DOCTYPE html>')
     with tag('html'):
         with tag('head'):
-            with tag('style'):
-                doc.asis(css)
+            doc.asis('<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">')
+            doc.asis('<link rel="stylesheet" href="test.css">')
+            with tag('script', src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"):
+                pass
+            with tag('script', src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"):
+                pass
+            # with tag('style'):
+            #     doc.asis(css)
         with tag('body'):
             for d in data:
                 doc.asis(d)
-
+    
     result = indent(doc.getvalue())
     print(result)
     with open('test.html', 'w') as HTMLCode:
@@ -42,6 +48,8 @@ xmax = data["xmax"]
 ymax = data["ymax"]
 
 #TODO: Sort the regions in a top down fashion
+
+
 for element in data['regions']:
     doc, tag, text = Doc().tagtext()
     if element["type"] == "Label":
@@ -50,22 +58,23 @@ for element in data['regions']:
         content.append(doc.getvalue())
         content.append("<br/>")
     elif element["type"] == "TextBox":
-        doc.stag('input', type = 'text', placeholder = element['content'], id = element['id'])
+        doc.stag('input', type = 'text', klass = 'col-sm-6' ,placeholder = element['content'], id = element['id'])
         content.append(doc.getvalue())
         content.append("<br/>")
     elif element["type"] == "CheckBox":
-        with tag('input', type = 'checkbox', value = element['content'], id = element['id']):
+        with tag('input', type = 'checkbox' ,value = element['content'], id = element['id']):
             text(element["content"])
         content.append(doc.getvalue())
         content.append("<br/>")
     elif element["type"] == "Button":
-        doc.stag('input', type = 'button', value = element['content'], id = element['id'])
+        doc.stag('button', klass = 'col-sm-6' ,value = element['content'], id = element['id'])
         content.append(doc.getvalue())
     elif element["type"] == "Image":
         doc.stag('img', src=element['src'], height=element['height'], width= element['width'])
         content.append(doc.getvalue())
 
-css_list.append( generate_css("body",{"display":"flex","flex-direction":"column", 
-"margin" : "auto", "margin-top": "15px" ,"width": "60%"}))
+# css_list.append( generate_css(
+#     "body",{"display":"flex","flex-direction":"column", 
+#     "margin" : "auto", "margin-top": "15px" ,"width": "60%"}))
 # css_list.append(generate_css_util())
 generate_html(content,'\n'.join(css_list))

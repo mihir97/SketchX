@@ -1,0 +1,47 @@
+{
+	"xmax":"1080",
+	"ymax":"720",
+	"regions":[
+		{
+			"type": "Image",
+			"src": "logo.png",
+			"height": "30px",
+			"width": "120px"
+		},
+    {
+			"id":"asdfsdfadsfasdf",
+			"type":"TextBox",
+			"height":"100",
+			"width":"100",
+			"x":"200",
+			"y":"500",
+			"content": "Text box content",
+			"parent":"{id}",
+			"child":"{id}",
+			"label": "Text box"
+		},
+    {
+      "id":"asdfsdfadsfasdf",
+      "type":"CheckBox",
+      "content": "Check box content",
+      "parent":"{id}",
+      "child":"{id}"
+    },
+		{
+      "id":"asdfsdfadsfasdf",
+      "type":"Radio",
+			"option1": "Option 1",
+			"option2": "Option 2",
+      "content": "Radio content",
+      "parent":"{id}",
+      "child":"{id}"
+    },
+    {
+      "id":"asdfsdfadsfasdf",
+      "type":"Button",
+      "content": "Button content",
+      "parent":"{id}",
+      "child":"{id}"
+    }
+	]
+}
