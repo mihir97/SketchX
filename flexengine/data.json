@@ -20,6 +20,18 @@
 			"child":"{id}",
 			"label": "Text box"
 		},
+		{
+			"id":"asdfsdfadsfasdf",
+			"type":"Password",
+			"height":"100",
+			"width":"100",
+			"x":"200",
+			"y":"500",
+			"content": "Password content",
+			"parent":"{id}",
+			"child":"{id}",
+			"label": "Password"
+		},
     {
       "id":"asdfsdfadsfasdf",
       "type":"CheckBox",

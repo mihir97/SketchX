@@ -52,12 +52,20 @@ for element in data['regions']:
     doc, tag, text = Doc().tagtext()
     if element["type"] == "TextBox":
         doc.asis('<div class="form-group">')
-        with tag ('label', klass='control-label col-sm-2'):
+        with tag ('label', klass='control-label col-sm-3'):
             text(element["label"])
         doc.asis('<div class="col-sm-10">')
         doc.stag('input', type = 'text', klass = 'form-control' ,placeholder = element['content'], id = element['id'])
         doc.asis('</div></div>')
         content.append(doc.getvalue())
+    elif element["type"] == "Password":
+        doc.asis('<div class="form-group">')
+        with tag ('label', klass='control-label col-sm-3'):
+            text(element["label"])
+        doc.asis('<div class="col-sm-10">')
+        doc.stag('input', type = 'password', klass = 'form-control' ,placeholder = element['content'], id = element['id'])
+        doc.asis('</div></div>')
+        content.append(doc.getvalue())    
     elif element["type"] == "CheckBox":
         doc.asis('<div class="col-sm-offset-2 col-sm-10">')
         doc.asis('<div class="checkbox">')
