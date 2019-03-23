@@ -24,11 +24,13 @@ app.post('/upload', upload.single('sketch'), function (req, res, next) {
   // req.file is the `avatar` file
   // req.body will hold the text fields, if there were any
   console.log(req.file.path)
-  res.send("Success")
+  setTimeout(function() {
+      res.send("Success");
+}, 2000);
+
 })
 
 
 app.listen(3030, function() {
   console.log('Express Server listening on port 3030!');
 })
-
