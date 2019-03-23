@@ -1,0 +1,86 @@
+{
+    "xmax": "1080",
+    "ymax": "720",
+    "regions": [
+        {
+            "type": "Heading",
+            "x": 230,
+            "y": 43,
+            "width": 265,
+            "height": 186,
+            "content": ""
+        },
+        {
+            "type": "Label",
+            "x": 37,
+            "y": 251,
+            "width": 194,
+            "height": 74,
+            "content": "Name"
+        },
+        {
+            "type": "TextBox",
+            "x": 248,
+            "y": 225,
+            "width": 483,
+            "height": 100,
+            "content": "none"
+        },
+        {
+            "type": "Label",
+            "x": 24,
+            "y": 483,
+            "width": 224,
+            "height": 65,
+            "content": "Gender"
+        },
+        {
+            "type": "Label",
+            "x": 264,
+            "y": 475,
+            "width": 207,
+            "height": 70,
+            "content": "Male"
+        },
+        {
+            "type": "RadioButton",
+            "x": 480,
+            "y": 459,
+            "width": 254,
+            "height": 74,
+            "content": "o Female"
+        },
+        {
+            "type": "Label",
+            "x": 16,
+            "y": 604,
+            "width": 279,
+            "height": 65,
+            "content": ""
+        },
+        {
+            "type": "Label",
+            "x": 328,
+            "y": 595,
+            "width": 191,
+            "height": 74,
+            "content": ""
+        },
+        {
+            "type": "Label",
+            "x": 528,
+            "y": 580,
+            "width": 184,
+            "height": 81,
+            "content": ""
+        },
+        {
+            "type": "TextBox",
+            "x": 240,
+            "y": 713,
+            "width": 423,
+            "height": 124,
+            "content": "none"
+        }
+    ]
+}
