@@ -1,0 +1,81 @@
+{
+	"xmax":"1080",
+	"ymax":"720",
+	"regions":[
+		{
+			"type": "Image",
+			"src": "logo.png",
+			"height": "30px",
+			"width": "120px",
+			"x": "1",
+			"y": "1"
+		},
+		{
+			"id":"asdfsdfadsfasdf",
+			"type":"Label",
+			"label": "Username",
+			"x": "2",
+			"y": "2"
+		},
+    {
+			"id":"asdfsdfadsfasdf",
+			"type":"TextBox",
+			"height":"100",
+			"width":"100",
+			"x":"3",
+			"y":"3",
+			"content": "Username",
+			"parent":"{id}",
+			"child":"{id}",
+			"label": "Username"
+		},
+		{
+			"id":"asdfsdfadsfasdf",
+			"type":"Label",
+			"label": "Password",
+			"x": "4",
+			"y": "4"
+		},
+		{
+			"id":"asdfsdfadsfasdf",
+			"type":"Password",
+			"height":"100",
+			"width":"100",
+			"x":"5",
+			"y":"5",
+			"content": "Password",
+			"parent":"{id}",
+			"child":"{id}",
+			"label": "Password"
+		},
+		{
+      "id":"asdfsdfadsfasdf",
+      "type":"Radio",
+			"option1": "Male",
+			"option2": "Female",
+      "content": "Gender",
+      "parent":"{id}",
+      "child":"{id}",
+			"x": "6",
+			"y": "6"
+    },
+    {
+      "id":"asdfsdfadsfasdf",
+      "type":"CheckBox",
+      "content": "Remember me",
+      "parent":"{id}",
+      "child":"{id}",
+			"x": "7",
+			"y": "7"
+    },
+    {
+      "id":"asdfsdfadsfasdf",
+      "type":"Button",
+      "content": "Submit",
+      "parent":"{id}",
+      "child":"{id}",
+			"x": "8",
+			"y": "8"
+    }
+	]
+}

@@ -52,28 +52,28 @@ elem_list = sorted(elem_list, key=lambda k: k["y"])
 
 for element in elem_list:
     doc, tag, text = Doc().tagtext()
-    if element["type"] == "Label":
+    if element["type"] == "Label" or element["type"] == "Heading":
         doc.asis('<div class="col-sm-offset-2 col-sm-10">')
-        text(element["label"])
+        text(element["content"])
         doc.asis('</div>')
         content.append(doc.getvalue())
     elif element["type"] == "TextBox":
         doc.asis('<div class="form-group">')
         doc.asis('<div class="col-18">')
-        doc.stag('input', type = 'text', klass = 'form-control', id = element['id'])
+        doc.stag('input', type = 'text', klass = 'form-control')
         doc.asis('</div></div>')
         content.append(doc.getvalue())
     elif element["type"] == "Password":
         doc.asis('<div class="form-group">')
         doc.asis('<div class="col-18">')
-        doc.stag('input', type = 'password', klass = 'form-control', id = element['id'])
+        doc.stag('input', type = 'password', klass = 'form-control')
         doc.asis('</div></div>')
         content.append(doc.getvalue())    
     elif element["type"] == "CheckBox":
         doc.asis('<div class="col-sm-offset-2 col-sm-10">')
         doc.asis('<div class="checkbox">')
         with tag('label'):
-            with tag('input', type = 'checkbox' ,value = element['content'], id = element['id']):
+            with tag('input', type = 'checkbox' ,value = element['content']):
                 text(" " + element["content"])
         doc.asis('</div></div>')
         content.append(doc.getvalue())
@@ -85,17 +85,11 @@ for element in elem_list:
         # doc.stag('button', klass = 'btn btn-default' ,value = element['content'], id = element['id'])
         doc.asis('</div></div>')
         content.append(doc.getvalue())
-    elif element["type"] == "Radio":
+    elif element["type"] == "RadioButton":
         doc.asis('<div class="form-check">') 
         doc.asis('<div class="col-sm-offset-2 col-sm-10">')
         doc.asis('<label class="form-check-label" for="radio1">')
-        doc.asis('<input type="radio" class="form-check-input" id="radio1" name="optradio" value="' + element["option1"] + '">' + element["option1"])
-        doc.asis('</label>')
-        doc.asis('</div></div>')
-        doc.asis('<div class="form-check">')
-        doc.asis('<div class="col-sm-offset-2 col-sm-10">')
-        doc.asis('<label class="form-check-label" for="radio2">')
-        doc.asis('<input type="radio" class="form-check-input" id="radio1" name="optradio" value="' + element["option2"] + '">' + element["option2"])
+        doc.asis('<input type="radio" class="form-check-input" id="radio1" name="optradio" value="' + element["content"] + '">' + element["content"])
         doc.asis('</label>')
         doc.asis('</div></div>')
         content.append(doc.getvalue())
