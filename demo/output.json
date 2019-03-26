@@ -8,7 +8,7 @@
             "y": 43,
             "width": 265,
             "height": 186,
-            "content": ""
+            "content": "none"
         },
         {
             "type": "Label",
@@ -16,7 +16,7 @@
             "y": 251,
             "width": 194,
             "height": 74,
-            "content": "Name"
+            "content": "none"
         },
         {
             "type": "TextBox",
@@ -56,7 +56,7 @@
             "y": 604,
             "width": 279,
             "height": 65,
-            "content": ""
+            "content": "none"
         },
         {
             "type": "Label",
@@ -64,7 +64,7 @@
             "y": 595,
             "width": 191,
             "height": 74,
-            "content": ""
+            "content": "none"
         },
         {
             "type": "Label",
@@ -72,7 +72,7 @@
             "y": 580,
             "width": 184,
             "height": 81,
-            "content": ""
+            "content": "none"
         },
         {
             "type": "TextBox",

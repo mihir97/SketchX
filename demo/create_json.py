@@ -9,6 +9,7 @@ import region
 import io
 from google.cloud import vision
 from google.cloud.vision import types
+from google.cloud.vision import enums
 import os
 import json
 
@@ -88,14 +89,45 @@ def get_texts(rects, img, Y):
     os.remove('temp.png')
     return texts
 
+def get_texts_batch(rects, img, Y):
+    texts = []
+    features = [
+        types.Feature(type=enums.Feature.Type.TEXT_DETECTION),
+    ]
 
-def write_json(rects, Ys, texts):
+    requests = []
+    for i, rect in enumerate(rects):
+        x, y, w, h = rect
+        tag = img[int(y):int((y+h)), int(x):int((x+w))]
+        cv2.imwrite('temp.png', tag)
+        with open('temp.png', 'rb') as image_file:
+            imageContext = types.ImageContext(language_hints=["en"])
+            image = types.Image(content = image_file.read())
+            request = types.AnnotateImageRequest(image=image, features=features, image_context=imageContext)
+            requests.append(request)
+        #print(labelSet[np.argmax(Y[i])])
+        #texts.append(detect_text('temp.png').strip())
+
+    client = vision.ImageAnnotatorClient()
+    response = client.batch_annotate_images(requests)
+
+    for response in response.responses:
+        if len(response.full_text_annotation.text) > 0:
+            texts.append(response.full_text_annotation.text.strip())
+        else:
+            texts.append("none")
+        
+    os.remove('temp.png')
+    return texts
+
+
+def write_json(rects, preds, texts):
     data = {}
     data['xmax'] = "1080"
     data['ymax'] = "720"
     data['regions'] = []
     for i, rect in enumerate(rects):
-        label = labelSet[np.argmax(Ys[i])]
+        label = preds[i]
         text = texts[i]    
         x, y, w, h = rect
         data['regions'].append({
@@ -109,7 +141,14 @@ def write_json(rects, Ys, texts):
         json.dump(data,outfile, indent=4)
 
     
-
+def convert_prediction(Y, texts):
+    preds = []
+    for i, text in enumerate(texts):
+        if text[0] == 'o' or text[0] == 'O' or text[0] == '0':
+            preds.append('RadioButton')
+        else:
+            preds.append(labelSet[np.argmax(Y[i])])
+    return preds
     
 if __name__ == '__main__':
     os.environ["GOOGLE_APPLICATION_CREDENTIALS"]=os.path.abspath("SketchX.json")
@@ -127,16 +166,19 @@ if __name__ == '__main__':
     
 
     Y = predict_from_model(rects, gray_image)
-    texts = get_texts(rects, img, Y)
+    texts = get_texts_batch(rects, img, Y)
     print(texts)
-    write_json(rects, Y, texts)
+    pred = convert_prediction(Y, texts)
+    print(pred)
+    write_json(rects, pred, texts)
+    
     #y = labelSet[np.argmax(Y[0])]
     for i, rect in enumerate(rects):
         x,y,w,h  = rect
         conf = np.amax(Y[i])
         if  conf > threshold:
             img = cv2.rectangle(img,(x,y),(x+w,y+h),(0,0,0),2)        #Draw contours
-            cv2.putText(img,labelSet[np.argmax(Y[i])] + ':' + str(conf),(x,y),cv2.FONT_HERSHEY_SIMPLEX, 1, 2)    #Number the contours
+            cv2.putText(img,pred[i] + ':' + str(conf),(x,y),cv2.FONT_HERSHEY_SIMPLEX, 1, 2)    #Number the contours
     cv2.imwrite("output.jpg",img)
 
     
