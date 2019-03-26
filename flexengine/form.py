@@ -3,6 +3,7 @@ import random
 import json
 data = json.load(open('data.json', 'r'))
 
+
 def generate_html(data,css):
     doc, tag, text = Doc().tagtext()
     doc.asis('<!DOCTYPE html>')
@@ -46,9 +47,10 @@ xmax = data["xmax"]
 ymax = data["ymax"]
 
 #TODO: Sort the regions in a top down fashion
+elem_list = data["regions"]
+elem_list = sorted(elem_list, key=lambda k: k["y"])
 
-
-for element in data['regions']:
+for element in elem_list:
     doc, tag, text = Doc().tagtext()
     if element["type"] == "Label":
         doc.asis('<div class="col-sm-offset-2 col-sm-10">')
