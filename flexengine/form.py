@@ -1,7 +1,8 @@
 from yattag import Doc, indent
 import random
 import json
-data = json.load(open('data.json', 'r'))
+import sys
+data = json.load(open(sys.argv[1], 'r'))
 
 
 def generate_html(data,css):
@@ -94,7 +95,7 @@ for element in elem_list:
         doc.asis('</div></div>')
         content.append(doc.getvalue())
     elif element["type"] == "Image":
-        doc.stag('img', src=element['src'], height=element['height'], width= element['width'])
+        doc.stag('img', src='logo.png', height=element['height'], width= element['width'])
         content.append(doc.getvalue())
 
 generate_html(content,'\n'.join(css_list))

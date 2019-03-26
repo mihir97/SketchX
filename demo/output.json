@@ -3,84 +3,84 @@
     "ymax": "720",
     "regions": [
         {
-            "type": "Heading",
-            "x": 230,
-            "y": 43,
-            "width": 265,
-            "height": 186,
+            "type": "Image",
+            "x": 193,
+            "y": 40,
+            "width": 259,
+            "height": 112,
             "content": "none"
         },
         {
             "type": "Label",
-            "x": 37,
-            "y": 251,
-            "width": 194,
-            "height": 74,
-            "content": "none"
+            "x": 203,
+            "y": 186,
+            "width": 262,
+            "height": 50,
+            "content": "Username"
         },
         {
             "type": "TextBox",
-            "x": 248,
-            "y": 225,
-            "width": 483,
-            "height": 100,
+            "x": 211,
+            "y": 251,
+            "width": 597,
+            "height": 86,
             "content": "none"
         },
         {
             "type": "Label",
-            "x": 24,
-            "y": 483,
-            "width": 224,
-            "height": 65,
-            "content": "Gender"
+            "x": 212,
+            "y": 352,
+            "width": 248,
+            "height": 52,
+            "content": "Password"
         },
         {
-            "type": "Label",
-            "x": 264,
-            "y": 475,
-            "width": 207,
-            "height": 70,
+            "type": "TextBox",
+            "x": 220,
+            "y": 419,
+            "width": 551,
+            "height": 89,
+            "content": "none"
+        },
+        {
+            "type": "RadioButton",
+            "x": 223,
+            "y": 540,
+            "width": 174,
+            "height": 46,
             "content": "Male"
         },
         {
             "type": "RadioButton",
-            "x": 480,
-            "y": 459,
-            "width": 254,
-            "height": 74,
-            "content": "o Female"
+            "x": 222,
+            "y": 602,
+            "width": 237,
+            "height": 51,
+            "content": "Female"
+        },
+        {
+            "type": "CheckBox",
+            "x": 218,
+            "y": 708,
+            "width": 338,
+            "height": 57,
+            "content": "Remember"
         },
         {
             "type": "Label",
-            "x": 16,
-            "y": 604,
-            "width": 279,
-            "height": 65,
-            "content": "none"
+            "x": 558,
+            "y": 716,
+            "width": 109,
+            "height": 42,
+            "content": "me"
         },
         {
-            "type": "Label",
-            "x": 328,
-            "y": 595,
-            "width": 191,
-            "height": 74,
-            "content": "none"
-        },
-        {
-            "type": "Label",
-            "x": 528,
-            "y": 580,
-            "width": 184,
-            "height": 81,
-            "content": "none"
-        },
-        {
-            "type": "TextBox",
-            "x": 240,
-            "y": 713,
-            "width": 423,
-            "height": 124,
-            "content": "none"
+            "type": "Button",
+            "x": 196,
+            "y": 803,
+            "width": 295,
+            "height": 114,
+            "content": "Subrnit"
         }
     ]
 }

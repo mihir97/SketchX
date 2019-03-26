@@ -143,12 +143,21 @@ def write_json(rects, preds, texts):
     
 def convert_prediction(Y, texts):
     preds = []
+    n_texts = []
     for i, text in enumerate(texts):
         if text[0] == 'o' or text[0] == 'O' or text[0] == '0':
             preds.append('RadioButton')
+            n_texts.append(text[2:])
+        elif labelSet[np.argmax(Y[i])] == 'Image' and text != 'none':
+            preds.append('Button')
+            n_texts.append(text)
+        elif text[0] == 'D':
+            preds.append('CheckBox')
+            n_texts.append(text[2:])
         else:
             preds.append(labelSet[np.argmax(Y[i])])
-    return preds
+            n_texts.append(text)
+    return preds, n_texts
     
 if __name__ == '__main__':
     os.environ["GOOGLE_APPLICATION_CREDENTIALS"]=os.path.abspath("SketchX.json")
@@ -168,7 +177,7 @@ if __name__ == '__main__':
     Y = predict_from_model(rects, gray_image)
     texts = get_texts_batch(rects, img, Y)
     print(texts)
-    pred = convert_prediction(Y, texts)
+    pred, texts = convert_prediction(Y, texts)
     print(pred)
     write_json(rects, pred, texts)
     
