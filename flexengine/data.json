@@ -8,6 +8,11 @@
 			"height": "30px",
 			"width": "120px"
 		},
+		{
+			"id":"asdfsdfadsfasdf",
+			"type":"Label",
+			"label": "Username"
+		},
     {
 			"id":"asdfsdfadsfasdf",
 			"type":"TextBox",
@@ -15,10 +20,15 @@
 			"width":"100",
 			"x":"200",
 			"y":"500",
-			"content": "Text box content",
+			"content": "Username",
 			"parent":"{id}",
 			"child":"{id}",
-			"label": "Text box"
+			"label": "Username"
+		},
+		{
+			"id":"asdfsdfadsfasdf",
+			"type":"Label",
+			"label": "Password"
 		},
 		{
 			"id":"asdfsdfadsfasdf",
@@ -27,31 +37,31 @@
 			"width":"100",
 			"x":"200",
 			"y":"500",
-			"content": "Password content",
+			"content": "Password",
 			"parent":"{id}",
 			"child":"{id}",
 			"label": "Password"
 		},
-    {
-      "id":"asdfsdfadsfasdf",
-      "type":"CheckBox",
-      "content": "Check box content",
-      "parent":"{id}",
-      "child":"{id}"
-    },
 		{
       "id":"asdfsdfadsfasdf",
       "type":"Radio",
-			"option1": "Option 1",
-			"option2": "Option 2",
-      "content": "Radio content",
+			"option1": "Male",
+			"option2": "Female",
+      "content": "Gender",
+      "parent":"{id}",
+      "child":"{id}"
+    },
+    {
+      "id":"asdfsdfadsfasdf",
+      "type":"CheckBox",
+      "content": "Remember me",
       "parent":"{id}",
       "child":"{id}"
     },
     {
       "id":"asdfsdfadsfasdf",
       "type":"Button",
-      "content": "Button content",
+      "content": "Submit",
       "parent":"{id}",
       "child":"{id}"
     }
