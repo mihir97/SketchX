@@ -1,0 +1,8 @@
+mktextfm ecrm1440
+mktextfm nullfont
+mktexpk --mfmode / --bdpi 600 --mag 2+44/600 --dpi 1244 cmbx12
+mktextfm ecrm1440
+mktextfm nullfont
+mktexpk --mfmode / --bdpi 600 --mag 2+44/600 --dpi 1244 cmbx12
+mktextfm ecrm1440
+mktextfm nullfont
