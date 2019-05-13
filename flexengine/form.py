@@ -3,7 +3,9 @@ import random
 import json
 import sys
 data = json.load(open(sys.argv[1], 'r'))
-
+prev_y = 0
+prev_h = 0
+consecutive_radio = 0
 
 def generate_html(data,css):
     doc, tag, text = Doc().tagtext()
@@ -28,7 +30,7 @@ def generate_html(data,css):
             doc.asis('</form></div></div>')
     
     result = indent(doc.getvalue())
-    print(result)
+    # print(result)
     with open('test.html', 'w') as HTMLCode:
         HTMLCode.write(result)
 
@@ -53,6 +55,8 @@ elem_list = sorted(elem_list, key=lambda k: k["y"])
 
 for element in elem_list:
     doc, tag, text = Doc().tagtext()
+    display_attribute = "form-check-inline"
+    
     if element["type"] == "Label" or element["type"] == "Heading":
         doc.asis('<div class="col-sm-offset-2 col-sm-10">')
         text(element["content"])
@@ -87,8 +91,19 @@ for element in elem_list:
         doc.asis('</div></div>')
         content.append(doc.getvalue())
     elif element["type"] == "RadioButton":
-        doc.asis('<div class="form-check">') 
-        doc.asis('<div class="col-sm-offset-2 col-sm-10">')
+        print("prev_y " + str(prev_y))
+        print("prev_h " + str(prev_h))
+        print("y " + str(element["y"]))
+        print("h " + str(element["height"]))
+        
+        if ((prev_y + prev_h) < (element["y"]) and consecutive_radio != 0):
+            display_attribute = "form-check"
+            consecutive_radio = 0
+        
+        consecutive_radio += 1
+        
+        doc.asis('<div class=' + display_attribute + '>') 
+        doc.asis('<div class="col-sm-offset-2 col-sm-12">')
         doc.asis('<label class="form-check-label" for="radio1">')
         doc.asis('<input type="radio" class="form-check-input" id="radio1" name="optradio" value="' + element["content"] + '">' + element["content"])
         doc.asis('</label>')
@@ -97,5 +112,8 @@ for element in elem_list:
     elif element["type"] == "Image":
         doc.stag('img', src='logo.png', height=element['height'], width= element['width'])
         content.append(doc.getvalue())
+    
+    prev_y = element["y"]
+    prev_h = element["height"]
 
 generate_html(content,'\n'.join(css_list))
