@@ -1,0 +1,36 @@
+\BOOKMARK [0][-]{chapter*.2}{List of Figures}{}% 1
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 2
+\BOOKMARK [1][-]{section.1.1}{The gap between design and development}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.2}{Bridging the gap}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.3}{Role of Computer Vision and ML}{chapter.1}% 5
+\BOOKMARK [2][-]{subsection.1.3.1}{Neural Networks}{section.1.3}% 6
+\BOOKMARK [2][-]{subsection.1.3.2}{Convolutional Neural Network}{section.1.3}% 7
+\BOOKMARK [2][-]{subsection.1.3.3}{RCNN}{section.1.3}% 8
+\BOOKMARK [2][-]{subsection.1.3.4}{YOLO \(You Only Look Once\)}{section.1.3}% 9
+\BOOKMARK [2][-]{subsection.1.3.5}{Optical Character Recognition}{section.1.3}% 10
+\BOOKMARK [0][-]{chapter.2}{Literature Review}{}% 11
+\BOOKMARK [1][-]{section.2.1}{Pix2code}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.2}{Sketch2Code}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.3}{Airbnb design team}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.4}{Deepcoder}{chapter.2}% 15
+\BOOKMARK [0][-]{chapter.3}{System specifications}{}% 16
+\BOOKMARK [1][-]{section.3.1}{Objectives}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.2}{Operating environment}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.3}{Libraries/Dependencies}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.4}{Online services}{chapter.3}% 20
+\BOOKMARK [0][-]{chapter.4}{System Design}{}% 21
+\BOOKMARK [1][-]{section.4.1}{Architecture overview}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.2}{Vision Model}{chapter.4}% 23
+\BOOKMARK [2][-]{subsection.4.2.1}{Experiments with Object Detection Algorithms}{section.4.2}% 24
+\BOOKMARK [2][-]{subsection.4.2.2}{RCNN}{section.4.2}% 25
+\BOOKMARK [2][-]{subsection.4.2.3}{YOLO \(You Only Look Once\)}{section.4.2}% 26
+\BOOKMARK [2][-]{subsection.4.2.4}{Faster-RCNN}{section.4.2}% 27
+\BOOKMARK [2][-]{subsection.4.2.5}{Conclusion}{section.4.2}% 28
+\BOOKMARK [1][-]{section.4.3}{Modified Approach}{chapter.4}% 29
+\BOOKMARK [2][-]{subsection.4.3.1}{Detection of ROI}{section.4.3}% 30
+\BOOKMARK [2][-]{subsection.4.3.2}{Classification of ROIs}{section.4.3}% 31
+\BOOKMARK [2][-]{subsection.4.3.3}{ Handwriting Recognition}{section.4.3}% 32
+\BOOKMARK [1][-]{section.4.4}{HTML generator}{chapter.4}% 33
+\BOOKMARK [1][-]{section.4.5}{End to End Experience}{chapter.4}% 34
+\BOOKMARK [2][-]{subsection.4.5.1}{Putting it all together}{section.4.5}% 35
+\BOOKMARK [2][-]{subsection.4.5.2}{Process Flow}{section.4.5}% 36

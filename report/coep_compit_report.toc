@@ -1,41 +1,40 @@
-\contentsline {chapter}{List of Tables}{ii}
-\contentsline {chapter}{List of Figures}{iii}
-\contentsline {chapter}{List of Symbols}{iv}
-\contentsline {chapter}{\numberline {1}Introduction}{1}
-\contentsline {section}{\numberline {1.1}The gap between design and development}{1}
-\contentsline {section}{\numberline {1.2}Bridging the gap}{2}
-\contentsline {section}{\numberline {1.3}Role of Computer Vision and ML}{3}
-\contentsline {subsection}{\numberline {1.3.1}Neural Networks}{3}
-\contentsline {subsection}{\numberline {1.3.2}Convolutional Neural Network}{5}
-\contentsline {subsection}{\numberline {1.3.3}RCNN}{6}
-\contentsline {subsection}{\numberline {1.3.4}YOLO (You Only Look Once)}{7}
-\contentsline {subsection}{\numberline {1.3.5}Optical Character Recognition}{7}
-\contentsline {chapter}{\numberline {2}Literature Review}{9}
-\contentsline {section}{\numberline {2.1}Pix2code}{9}
-\contentsline {section}{\numberline {2.2}Sketch2Code}{9}
-\contentsline {section}{\numberline {2.3}Airbnb design team}{10}
-\contentsline {section}{\numberline {2.4}Deepcoder}{10}
-\contentsline {chapter}{\numberline {3}System Design}{12}
-\contentsline {section}{\numberline {3.1}Do we really need this??}{12}
-\contentsline {section}{\numberline {3.2}Purpose}{12}
-\contentsline {chapter}{\numberline {4}System Design}{13}
-\contentsline {section}{\numberline {4.1}Architecture overview}{13}
-\contentsline {section}{\numberline {4.2}Vision Model}{13}
-\contentsline {subsection}{\numberline {4.2.1}Experiments with Object Detection Algorithms}{14}
-\contentsline {subsection}{\numberline {4.2.2}RCNN}{15}
-\contentsline {subsection}{\numberline {4.2.3}YOLO (You Only Look Once)}{15}
-\contentsline {subsection}{\numberline {4.2.4}Faster-RCNN}{16}
-\contentsline {subsection}{\numberline {4.2.5}Conclusion}{16}
-\contentsline {section}{\numberline {4.3}Modified Approach}{17}
-\contentsline {subsection}{\numberline {4.3.1}Detection of ROI}{17}
-\contentsline {subsubsection}{Grayscale conversion}{18}
-\contentsline {subsubsection}{Adaptive thresholding}{18}
-\contentsline {subsubsection}{Dilation}{19}
-\contentsline {subsubsection}{Finding bounding rectangles}{19}
-\contentsline {subsection}{\numberline {4.3.2}Classification of ROIs}{20}
-\contentsline {subsection}{\numberline {4.3.3} Handwriting Recognition}{23}
-\contentsline {section}{\numberline {4.4}HTML generator}{24}
-\contentsline {section}{\numberline {4.5}End to End Experience}{25}
-\contentsline {chapter}{\numberline {5}References}{26}
-\contentsline {chapter}{\numberline {A}Algorithm for Lighting}{27}
-\contentsline {chapter}{\numberline {B}Flow Chart for Making Popcorn}{28}
+\contentsline {chapter}{List of Figures}{ii}{chapter*.2}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}The gap between design and development}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Bridging the gap}{2}{section.1.2}
+\contentsline {section}{\numberline {1.3}Role of Computer Vision and ML}{3}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Neural Networks}{3}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Convolutional Neural Network}{5}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.3}RCNN}{6}{subsection.1.3.3}
+\contentsline {subsection}{\numberline {1.3.4}YOLO (You Only Look Once)}{7}{subsection.1.3.4}
+\contentsline {subsection}{\numberline {1.3.5}Optical Character Recognition}{7}{subsection.1.3.5}
+\contentsline {chapter}{\numberline {2}Literature Review}{9}{chapter.2}
+\contentsline {section}{\numberline {2.1}Pix2code}{9}{section.2.1}
+\contentsline {section}{\numberline {2.2}Sketch2Code}{9}{section.2.2}
+\contentsline {section}{\numberline {2.3}Airbnb design team}{10}{section.2.3}
+\contentsline {section}{\numberline {2.4}Deepcoder}{10}{section.2.4}
+\contentsline {chapter}{\numberline {3}System specifications}{12}{chapter.3}
+\contentsline {section}{\numberline {3.1}Objectives}{12}{section.3.1}
+\contentsline {section}{\numberline {3.2}Operating environment}{12}{section.3.2}
+\contentsline {section}{\numberline {3.3}Libraries/Dependencies}{12}{section.3.3}
+\contentsline {section}{\numberline {3.4}Online services}{13}{section.3.4}
+\contentsline {chapter}{\numberline {4}System Design}{14}{chapter.4}
+\contentsline {section}{\numberline {4.1}Architecture overview}{14}{section.4.1}
+\contentsline {section}{\numberline {4.2}Vision Model}{14}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Experiments with Object Detection Algorithms}{15}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}RCNN}{16}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}YOLO (You Only Look Once)}{16}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Faster-RCNN}{17}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Conclusion}{17}{subsection.4.2.5}
+\contentsline {section}{\numberline {4.3}Modified Approach}{18}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Detection of ROI}{18}{subsection.4.3.1}
+\contentsline {subsubsection}{Grayscale conversion}{19}{section*.3}
+\contentsline {subsubsection}{Adaptive thresholding}{19}{section*.4}
+\contentsline {subsubsection}{Dilation}{20}{section*.5}
+\contentsline {subsubsection}{Finding bounding rectangles}{20}{section*.6}
+\contentsline {subsection}{\numberline {4.3.2}Classification of ROIs}{21}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3} Handwriting Recognition}{24}{subsection.4.3.3}
+\contentsline {section}{\numberline {4.4}HTML generator}{25}{section.4.4}
+\contentsline {section}{\numberline {4.5}End to End Experience}{26}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Putting it all together}{26}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Process Flow}{27}{subsection.4.5.2}

@@ -12,6 +12,8 @@
 \usepackage[dvips]{graphics}
 \usepackage{color}
 \usepackage{epsfig,float}
+\usepackage{hyperref}
+
 %_____________________________________________________________________________________________
 % Page Layout
 %_____________________________________________________________________________________________
@@ -60,14 +62,14 @@
 				% LATEX needs to run 2-3 times over source to get this correct
 
 \pagenumbering{roman}	% Lowercase roman numbering for prelim sections
-\listoftables
-\addcontentsline{toc}{chapter}{List of Tables}
+%\listoftables
+%\addcontentsline{toc}{chapter}{List of Tables}
 
 \listoffigures
 \addcontentsline{toc}{chapter}{List of Figures}
 
-\chapter*{List of Symbols}
-\addcontentsline{toc}{chapter}{List of Symbols}
+%\chapter*{List of Symbols}
+%\addcontentsline{toc}{chapter}{List of Symbols}
 
 \newpage
 \pagenumbering{arabic}	% Change to Arabic numbers for main chapters.
@@ -80,12 +82,5 @@
 \input{chapter_4.tex}
 \input{chapter_5.tex}
 
-\appendix
-\chapter{Algorithm for Lighting}
-\chapter{Flow Chart for Making Popcorn}
-
-\bibliographystyle{plain}  % You can change the style of writing bibliography.
-\bibliography{coep_compit_report} % Instead of a .bib file, you can just write it in
-				  % a text file with \bibitem entries.
 %_____________________________________________________________________________________________
 \end{document}			% End of Report

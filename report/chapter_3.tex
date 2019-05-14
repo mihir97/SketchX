@@ -2,11 +2,35 @@
 % Department of Comp/IT BTech Project Report
 %_____________________________________________________________________________________________
 
-\chapter{System Design}
-  \section{Do we really need this??}
+\chapter{System specifications}
 
-  \section{Purpose}
-    To transform images of hand-drawn wireframes of website design into code using deep learning neural networks to multi-platform web-based HTML/CSS interfaces.
+  \section{Objectives}
+    \begin{itemize}
+      \item Pre processing input image
+      \item Detection Regions of Interest (basic HTML elements) in the image
+      \item Labelling these regions using machine learning
+      \item Generating code based on component files
+  	\end{itemize}
+  \section{Operating environment}
+    \begin{itemize}
+      \item A hosted machine with >8GB RAM for processing images and gathering results
+      \item Graphical processing focussed machines for training the models
+      \item Camera with >8MP image quality for capturing wireframes
+    \end{itemize}
+  \section{Libraries/Dependencies}
+    \begin{itemize}
+      \item Tensorflow framework
+      \item Keras
+      \item Python 3.0
+      \item OpenCV
+      \item Tesseract OCR
+    \end{itemize}
+  \section{Online services}
+    \begin{itemize}
+      \item Amazon Web Services (Hosting services)
+      \item Google OCR Engine
+      \item Github (Version Control)
+    \end{itemize}
 
 
 
